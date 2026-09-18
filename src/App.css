@@ -185,6 +185,124 @@ a {
 }
 
 /* =================================
+   HEADER ACTIONS
+================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+/* =================================
+   DOWNLOAD RESUME
+================================= */
+
+.resume-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    border: 1px solid rgba(110, 255, 190, 0.35);
+    border-radius: 8px;
+
+    background: rgba(110, 255, 190, 0.07);
+
+    color: #6effbe;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    /*
+       The button stays still most of the time
+       and gives a short shake periodically.
+    */
+    animation: resume-attention 4s ease-in-out infinite;
+}
+
+.resume-download-btn:hover {
+    background: rgba(110, 255, 190, 0.14);
+    border-color: rgba(110, 255, 190, 0.65);
+
+    color: #8fffcf;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 20px rgba(110, 255, 190, 0.08);
+
+    /*
+       Stop shaking while the user is interacting
+       with the button.
+    */
+    animation-play-state: paused;
+}
+
+.download-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+}
+
+.resume-download-btn:hover .download-icon {
+    transform: translateY(2px);
+}
+
+/* =================================
+   RESUME ATTENTION ANIMATION
+================================= */
+
+@keyframes resume-attention {
+
+    0%,
+    80%,
+    100% {
+        transform: translateX(0);
+    }
+
+    82% {
+        transform: translateX(-3px);
+    }
+
+    84% {
+        transform: translateX(3px);
+    }
+
+    86% {
+        transform: translateX(-3px);
+    }
+
+    88% {
+        transform: translateX(3px);
+    }
+
+    90% {
+        transform: translateX(0);
+    }
+}
+
+/* =================================
    HEADER CONTACT
 ================================= */
 
@@ -368,6 +486,20 @@ a {
         font-size: 11px;
     }
 
+    /* Resume + Let's talk */
+    .header-actions {
+        gap: 6px;
+    }
+
+    .resume-download-btn {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .download-icon {
+        font-size: 14px;
+    }
+
     .header-contact {
         padding: 8px 10px;
     }
@@ -394,12 +526,38 @@ a {
     }
 }
 
+/* =================================
+   SMALL MOBILE
+================================= */
+
 @media (max-width: 420px) {
     .main-nav .nav-link {
         padding: 8px 9px;
     }
 
+    /*
+       Hide Let's talk on very small screens
+       so Resume remains visible.
+    */
     .header-contact {
         display: none;
+    }
+
+    .resume-download-btn {
+        padding: 8px 10px;
+    }
+}
+
+/* =================================
+   REDUCED MOTION
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .resume-download-btn {
+        animation: none;
     }
 }

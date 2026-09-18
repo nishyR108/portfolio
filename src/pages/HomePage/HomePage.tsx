@@ -35,7 +35,7 @@ function HomePage() {
       label: 'Years with Node.js',
     },
     {
-      value: '10+',
+      value: '9+',
       label: 'Projects delivered',
     },
   ]
@@ -48,9 +48,22 @@ function HomePage() {
 
       <section className="hero">
         {/* Availability */}
-        <div className="availability">
-          <span className="availability-dot" />
-          <span>Open to Full-Stack Developer opportunities</span>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+          <div className="availability">
+            <span className="availability-dot" />
+            <span>Open to Full-Stack Developer opportunities</span>
+          </div>
+          <div>
+            <a
+              className="resume-download-btn"
+              href="/Nishant_Thakur_Resume_FSD.pdf"
+              download="Nishant_Thakur_Resume.pdf"
+              aria-label="Download Resume"
+            >
+              <span>Download Resume</span>
+              <span className="download-icon">↓</span>
+            </a>
+          </div>
         </div>
 
         {/* Intro */}
