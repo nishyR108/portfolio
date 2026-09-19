@@ -44,17 +44,25 @@ function SiteLayout() {
                         >
                             Projects
                         </NavLink>
+
+                        <NavLink
+                            className={({ isActive }) =>
+                                `nav-link ${isActive ? 'active' : ''}`
+                            }
+                            to="/certifications"
+                        >
+                            Certifications
+                        </NavLink>
                     </nav>
 
                     {/* Header Actions */}
                     <div className="header-actions">
-                        <a
+                        <NavLink
                             className="header-contact"
-                            href="mailto:nishant@example.com"
+                            to="/contact"
                         >
                             Let's talk
 
-                            {/* Clean arrow icon */}
                             <svg
                                 className="contact-arrow"
                                 viewBox="0 0 20 20"
@@ -69,7 +77,7 @@ function SiteLayout() {
                                     strokeLinejoin="round"
                                 />
                             </svg>
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
             </header>
