@@ -3,11 +3,13 @@
   min-height: calc(100vh - 80px);
   overflow: hidden;
   padding: 60px 6vw 70px;
+
   background:
     radial-gradient(circle at 80% 20%,
       rgba(110, 255, 190, 0.08),
       transparent 30%),
     #080909;
+
   color: #f5f5f5;
 }
 
@@ -19,10 +21,13 @@
   position: absolute;
   width: 500px;
   height: 500px;
+
   border-radius: 50%;
   pointer-events: none;
+
   filter: blur(120px);
   opacity: 0.12;
+
   animation: floatGlow 10s ease-in-out infinite;
 }
 
@@ -58,8 +63,20 @@
 .hero {
   position: relative;
   z-index: 2;
+
   max-width: 1280px;
   margin: 0 auto;
+}
+
+/* --------------------------------
+   TOP ACTIONS
+-------------------------------- */
+
+.hero-top-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* --------------------------------
@@ -93,6 +110,7 @@
 .availability-dot {
   width: 7px;
   height: 7px;
+  flex-shrink: 0;
 
   border-radius: 50%;
   background: #6effbe;
@@ -116,6 +134,73 @@
     opacity: 0.5;
     transform: scale(0.85);
   }
+}
+
+/* --------------------------------
+   RESUME BUTTON
+-------------------------------- */
+
+.resume-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 9px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: #bcbcbc;
+
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.resume-download-btn:hover {
+  border-color: rgba(110, 255, 190, 0.4);
+  background: rgba(110, 255, 190, 0.08);
+  color: #6effbe;
+
+  transform: translateY(-2px);
+}
+
+.download-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* --------------------------------
+   MAIN HERO
+-------------------------------- */
+
+.hero-main {
+  display: grid;
+
+  /*
+    Left side = content
+    Right side = profile image
+  */
+  grid-template-columns: minmax(0, 1fr) 280px;
+
+  /*
+    Important:
+    keeps profile image at the TOP of the right column
+  */
+  align-items: start;
+
+  gap: 50px;
 }
 
 /* --------------------------------
@@ -216,6 +301,7 @@
   border-color: rgba(110, 255, 190, 0.4);
   background: rgba(110, 255, 190, 0.05);
   color: #6effbe;
+
   transform: translateY(-2px);
 }
 
@@ -282,6 +368,131 @@
 
 .secondary-button:hover {
   color: #fff;
+}
+
+/* --------------------------------
+   PROFILE IMAGE
+-------------------------------- */
+
+.hero-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /*
+    No vertical centering.
+    Image stays at the top-right of hero-main.
+  */
+  padding-top: 90px;
+  animation: fadeUp 0.9s ease 0.25s both;
+}
+
+.profile-image-wrapper {
+  position: relative;
+
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Decorative background circle */
+
+.profile-image-wrapper::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(135deg,
+      rgba(110, 255, 190, 0.16),
+      rgba(124, 92, 255, 0.08));
+
+  box-shadow:
+    0 0 0 1px rgba(110, 255, 190, 0.12),
+    0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+/* Profile photo */
+
+.profile-image {
+  position: relative;
+  z-index: 2;
+
+  width: 220px;
+  height: 220px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 50%;
+
+  border: 5px solid #080909;
+
+  background: #151817;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Decorative ring */
+
+.profile-image-ring {
+  position: absolute;
+  z-index: 3;
+
+  inset: -12px;
+
+  border: 1px dashed rgba(110, 255, 190, 0.3);
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  animation: rotateRing 25s linear infinite;
+}
+
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Image caption */
+
+.profile-caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 22px;
+
+  color: #777;
+
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+.profile-caption-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+  background: #6effbe;
+
+  box-shadow: 0 0 10px rgba(110, 255, 190, 0.6);
 }
 
 /* --------------------------------
@@ -422,7 +633,32 @@
 }
 
 /* --------------------------------
-   RESPONSIVE
+   RESPONSIVE - TABLET
+-------------------------------- */
+
+@media (max-width: 1100px) {
+  .hero-main {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 30px;
+  }
+
+  .profile-image-wrapper {
+    width: 210px;
+    height: 210px;
+  }
+
+  .profile-image {
+    width: 185px;
+    height: 185px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 7vw, 85px);
+  }
+}
+
+/* --------------------------------
+   RESPONSIVE - MOBILE/TABLET
 -------------------------------- */
 
 @media (max-width: 900px) {
@@ -430,8 +666,36 @@
     padding: 70px 5vw 50px;
   }
 
+  .hero-main {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-profile {
+    /*
+      Image appears before the content on smaller screens.
+    */
+    order: -1;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  .profile-image-wrapper {
+    width: 210px;
+    height: 210px;
+  }
+
+  .profile-image {
+    width: 185px;
+    height: 185px;
+  }
+
+  .profile-caption {
+    margin-top: 18px;
+  }
+
   .hero-content {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   .hero-bottom {
@@ -442,17 +706,56 @@
   }
 }
 
+/* --------------------------------
+   RESPONSIVE - MOBILE
+-------------------------------- */
+
 @media (max-width: 600px) {
   .home-page {
     padding: 55px 20px 40px;
+  }
+
+  .hero-top-actions {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .availability {
     font-size: 11px;
   }
 
+  .resume-download-btn {
+    font-size: 11px;
+  }
+
+  .hero-profile {
+    padding-top: 30px;
+  }
+
+  .profile-image-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-image {
+    width: 158px;
+    height: 158px;
+  }
+
+  .profile-image-ring {
+    inset: -8px;
+  }
+
+  .profile-caption {
+    font-size: 9px;
+  }
+
   .hero-content {
-    margin-top: 42px;
+    margin-top: 5px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
   }
 
   .hero h1 {
@@ -510,5 +813,21 @@
 
   .metric-card span {
     font-size: 10px;
+  }
+}
+
+/* --------------------------------
+   REDUCED MOTION
+-------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

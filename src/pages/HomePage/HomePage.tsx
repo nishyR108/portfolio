@@ -47,69 +47,90 @@ function HomePage() {
       <div className="hero-glow hero-glow-two" />
 
       <section className="hero">
-        {/* Availability */}
-        <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+        {/* Availability and Resume */}
+        <div className="hero-top-actions">
           <div className="availability">
             <span className="availability-dot" />
             <span>Open to Full-Stack Developer opportunities</span>
           </div>
-          <div>
-            <a
-              className="resume-download-btn"
-              href="/Nishant_Thakur_Resume_FSD.pdf"
-              download="Nishant_Thakur_Resume.pdf"
-              aria-label="Download Resume"
-            >
-              <span>Download Resume</span>
-              <span className="download-icon">↓</span>
-            </a>
+
+          <a
+            className="resume-download-btn"
+            href="/Nishant_Thakur_Resume_FSD.pdf"
+            download="Nishant_Thakur_Resume.pdf"
+            aria-label="Download Resume"
+          >
+            <span>Download Resume</span>
+            <span className="download-icon">↓</span>
+          </a>
+        </div>
+
+        {/* Main Hero */}
+        <div className="hero-main">
+          {/* Intro */}
+          <div className="hero-content">
+            <p className="eyebrow">
+              React.js · Node.js · TypeScript
+            </p>
+
+            <h1>
+              Full-Stack
+              <span> Developer </span>
+              building scalable web applications.
+            </h1>
+
+            <p className="hero-description">
+              Hi, I'm <strong>Nishant Thakur</strong> — a Full-Stack
+              Developer with 6.5+ years of experience in web development,
+              specializing in React.js, JavaScript, TypeScript and Node.js.
+              I build responsive, scalable and maintainable web applications
+              with modern frontend, backend and cloud technologies.
+            </p>
+
+            {/* Skills */}
+            <div className="skills">
+              {skills.map((skill) => (
+                <span className="skill-pill" key={skill}>
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            {/* Actions */}
+            <div className="page-actions">
+              <Link className="primary-button" to="/projects">
+                View my projects
+                <span>↗</span>
+              </Link>
+
+              <Link className="secondary-button" to="/about">
+                About me
+              </Link>
+            </div>
+          </div>
+
+          {/* Profile Image - Top Right */}
+          <div className="hero-profile">
+            <div className="profile-image-wrapper">
+              <img
+                src="/nishant-profile.png"
+                alt="Nishant Thakur - Full-Stack Developer"
+                className="profile-image"
+              />
+
+              <div className="profile-image-ring" />
+            </div>
+
+            <div className="profile-caption">
+              <span className="profile-caption-dot" />
+              <span>Building digital experiences</span>
+            </div>
           </div>
         </div>
 
-        {/* Intro */}
-        <div className="hero-content">
-          <p className="eyebrow">
-            React.js · Node.js · TypeScript
-          </p>
-
-          <h1>
-            Full-Stack
-            <span> Developer </span>
-            building scalable web applications.
-          </h1>
-
-          <p className="hero-description">
-            Hi, I'm <strong>Nishant Thakur</strong> — a Full-Stack
-            Developer with 6.5+ years of experience in web development,
-            specializing in React.js, JavaScript, TypeScript and Node.js.
-            I build responsive, scalable and maintainable web applications
-            with modern frontend, backend and cloud technologies.
-          </p>
-
-          {/* Skills */}
-          <div className="skills">
-            {skills.map((skill) => (
-              <span className="skill-pill" key={skill}>
-                {skill}
-              </span>
-            ))}
-          </div>
-
-          {/* Actions */}
-          <div className="page-actions">
-            <Link className="primary-button" to="/projects">
-              View my projects
-              <span>↗</span>
-            </Link>
-
-            <Link className="secondary-button" to="/about">
-              About me
-            </Link>
-          </div>
-        </div>
-
-        {/* Hero bottom */}
+        {/* Hero Bottom */}
         <div className="hero-bottom">
+          {/* Statement */}
           <div className="hero-statement">
             <span className="statement-line" />
 
