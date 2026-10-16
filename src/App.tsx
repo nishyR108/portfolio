@@ -151,7 +151,7 @@ function App() {
         <div className="footer-status"><span className="availability-dot" /> Available for new opportunities</div>
         <span className="footer-copy">© {new Date().getFullYear()} Nishant Thakur</span>
         <div className="footer-socials" aria-label="Social links">
-          <a className="social-link" href="https://www.linkedin.com/in/nishant-thakur-7a3745161" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+          <a className="social-link" href="https://www.linkedin.com/in/nishantthakur1505" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.77-2-5.52-4.66-5.52-2.14 0-3.1 1.18-3.63 2.01V8.5H9.2V21h3.51v-6.19c0-1.63.31-3.21 2.33-3.21 1.99 0 2.01 1.87 2.01 3.32V21H21v-7.15Z"/></svg>
           </a>
           <a className="social-link" href="https://wa.me/918709440079" target="_blank" rel="noreferrer" aria-label="WhatsApp" title="WhatsApp">

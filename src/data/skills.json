@@ -11,21 +11,8 @@
     "Angular",
     "jQuery"
   ],
-  "backend": [
-    "Node.js",
-    "Express.js",
-    "NestJS",
-    "REST APIs"
-  ],
-  "databases": [
-    "MongoDB",
-    "PostgreSQL",
-    "DynamoDB"
-  ],
-  "cloudAndTools": [
-    "AWS",
-    "Git",
-    "GitHub",
-    "Vite"
-  ]
+  "backend": ["Node.js", "Express.js", "NestJS", "REST APIs", "MicroServices"],
+  "databases": ["MongoDB", "PostgreSQL", "DynamoDB"],
+  "cloudAndTools": ["AWS", "Git", "GitHub", "Vite", "CI/CD", "Postman", "Docker"],
+  "AI": ["LLM"]
 }

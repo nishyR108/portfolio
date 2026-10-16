@@ -129,7 +129,7 @@ function SiteLayout() {
                         {/* LinkedIn */}
                         <a
                             className="social-link"
-                            href="https://www.linkedin.com/in/nishant-thakur-7a3745161"
+                            href="https://www.linkedin.com/in/nishantthakur1505"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="LinkedIn"
