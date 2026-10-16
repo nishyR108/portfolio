@@ -1,0 +1,668 @@
+.about-page {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 6vw 120px;
+    overflow: hidden;
+}
+
+/* =================================
+   HERO
+================================= */
+
+.about-hero {
+    max-width: 1050px;
+
+    animation: aboutFadeUp 0.8s ease both;
+}
+
+.about-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: fit-content;
+
+    color: #6effbe;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.about-label span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #6effbe;
+
+    box-shadow: 0 0 12px rgba(110, 255, 190, 0.7);
+}
+
+.about-hero h1 {
+    margin: 30px 0 0;
+
+    font-size: clamp(52px, 8vw, 105px);
+
+    line-height: 0.96;
+
+    font-weight: 600;
+
+    letter-spacing: -0.065em;
+}
+
+.about-hero h1 span {
+    color: #666;
+}
+
+.about-intro {
+    max-width: 720px;
+
+    margin: 40px 0 0;
+
+    color: #929292;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+/* =================================
+   MAIN GRID
+================================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.7fr);
+
+    gap: 80px;
+
+    margin-top: 130px;
+}
+
+/* =================================
+   STORY
+================================= */
+
+.about-story {
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 25px;
+}
+
+.section-number {
+    color: #6effbe;
+
+    font-family: monospace;
+
+    font-size: 12px;
+}
+
+.about-story h2 {
+    margin: 0 0 28px;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.04em;
+}
+
+.about-story p {
+    max-width: 700px;
+
+    margin: 0 0 20px;
+
+    color: #858585;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+/* =================================
+   EXPERIENCE CARD
+================================= */
+
+.experience-card {
+    align-self: start;
+
+    padding: 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015));
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.experience-card:hover {
+    border-color: rgba(110, 255, 190, 0.2);
+
+    transform: translateY(-5px);
+}
+
+.card-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #666;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+}
+
+.experience-card strong {
+    display: block;
+
+    color: #f5f5f5;
+
+    font-size: 64px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+}
+
+.experience-text {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.experience-divider {
+    height: 1px;
+
+    margin: 28px 0 5px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.experience-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    font-size: 11px;
+}
+
+.experience-row:last-child {
+    border-bottom: 0;
+}
+
+.experience-row span:first-child {
+    color: #555;
+}
+
+.experience-row span:last-child {
+    color: #aaa;
+
+    text-align: right;
+}
+
+/* =================================
+   STRENGTHS
+================================= */
+
+.strengths-section {
+    margin-top: 150px;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 45px;
+}
+
+.eyebrow {
+    margin: 0 0 15px;
+
+    color: #6effbe;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(35px, 5vw, 60px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -0.055em;
+}
+
+.section-heading>p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #707070;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.strengths-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.strength-card {
+    position: relative;
+
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 28px;
+
+    background: #0b0c0c;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.strength-card:hover {
+    background: #101212;
+}
+
+.strength-number {
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 11px;
+}
+
+.strength-content {
+    max-width: 300px;
+}
+
+.strength-content h3 {
+    margin: 0 0 12px;
+
+    font-size: 23px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.03em;
+}
+
+.strength-content p {
+    margin: 0;
+
+    color: #707070;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.strength-arrow {
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    color: #555;
+
+    font-size: 20px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.strength-card:hover .strength-arrow {
+    color: #6effbe;
+
+    transform: translate(3px, -3px);
+}
+
+/* =================================
+   TECHNOLOGY
+================================= */
+
+.technology-section {
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 80px;
+
+    margin-top: 150px;
+
+    padding-top: 70px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.technology-heading h2 {
+    margin: 0;
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.045em;
+}
+
+.technology-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-content: flex-start;
+
+    gap: 10px;
+}
+
+.technology-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    color: #999;
+
+    font-size: 12px;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.technology-item:hover {
+    color: #eee;
+
+    border-color: rgba(110, 255, 190, 0.25);
+
+    background: rgba(110, 255, 190, 0.04);
+
+    transform: translateY(-2px);
+}
+
+.tech-dot {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #555;
+
+    transition: background 0.25s ease;
+}
+
+.technology-item:hover .tech-dot {
+    background: #6effbe;
+}
+
+/* =================================
+   CLOSING
+================================= */
+
+.about-closing {
+    display: grid;
+
+    grid-template-columns: 2px 1fr;
+
+    gap: 25px;
+
+    max-width: 750px;
+
+    margin-top: 160px;
+}
+
+.closing-line {
+    width: 2px;
+
+    background: #6effbe;
+}
+
+.about-closing h2 {
+    margin: 0;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -0.055em;
+}
+
+.about-closing>div>p:last-child {
+    max-width: 560px;
+
+    margin-top: 25px;
+
+    color: #707070;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+/* =================================
+   ANIMATION
+================================= */
+
+@keyframes aboutFadeUp {
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+    .about-page {
+        padding: 80px 5vw 100px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        margin-top: 100px;
+    }
+
+    .experience-card {
+        max-width: 500px;
+    }
+
+    .strengths-section {
+        margin-top: 110px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .strengths-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .strength-card {
+        min-height: 220px;
+    }
+
+    .technology-section {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-top: 110px;
+    }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+    .about-page {
+        padding: 65px 20px 80px;
+    }
+
+    .about-hero h1 {
+        margin-top: 25px;
+
+        font-size: clamp(48px, 15vw, 70px);
+    }
+
+    .about-intro {
+        margin-top: 28px;
+
+        font-size: 15px;
+    }
+
+    .about-grid {
+        margin-top: 80px;
+    }
+
+    .about-story {
+        grid-template-columns: 30px 1fr;
+
+        gap: 15px;
+    }
+
+    .about-story h2 {
+        font-size: 25px;
+    }
+
+    .about-story p {
+        font-size: 14px;
+    }
+
+    .experience-card {
+        padding: 25px;
+    }
+
+    .experience-card strong {
+        font-size: 55px;
+    }
+
+    .strengths-section {
+        margin-top: 90px;
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+
+    .strength-card {
+        min-height: 240px;
+
+        padding: 23px;
+    }
+
+    .technology-section {
+        margin-top: 90px;
+
+        padding-top: 50px;
+    }
+
+    .technology-heading h2 {
+        font-size: 30px;
+    }
+
+    .about-closing {
+        margin-top: 100px;
+    }
+
+    .about-closing h2 {
+        font-size: 42px;
+    }
+}

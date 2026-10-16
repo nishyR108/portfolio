@@ -1,0 +1,493 @@
+.contact-page {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 6vw 120px;
+    overflow: hidden;
+    color: #f5f5f5;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.contact-hero {
+    max-width: 1050px;
+    animation: contactFadeUp 0.8s ease both;
+}
+
+.contact-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #6effbe;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-label-dot {
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #6effbe;
+
+    box-shadow: 0 0 12px rgba(110, 255, 190, 0.65);
+}
+
+.contact-heading {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr;
+    gap: 80px;
+
+    margin-top: 30px;
+    padding-bottom: 100px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-heading h1 {
+    margin: 0;
+
+    font-size: clamp(52px, 8vw, 105px);
+    line-height: 0.96;
+    font-weight: 600;
+    letter-spacing: -0.065em;
+}
+
+.contact-heading h1 span {
+    color: #666;
+}
+
+.contact-intro {
+    display: flex;
+    align-items: flex-end;
+}
+
+.contact-intro p {
+    max-width: 430px;
+    margin: 0;
+
+    color: #929292;
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+/* =========================
+   MAIN CONTACT
+========================= */
+
+.contact-main {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr;
+    gap: 80px;
+
+    margin-top: 130px;
+
+    animation: contactFadeUp 0.8s ease 0.15s both;
+}
+
+/* CTA */
+
+.contact-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-cta-label {
+    margin-bottom: 25px;
+
+    color: #666;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+}
+
+.contact-cta h2 {
+    margin: 0 0 40px;
+
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 0.98;
+    font-weight: 600;
+    letter-spacing: -0.055em;
+}
+
+.contact-cta h2 span {
+    color: #666;
+}
+
+/* Primary button */
+
+.contact-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    min-width: 230px;
+    min-height: 64px;
+
+    padding: 0 22px 0 25px;
+
+    border: 1px solid rgba(110, 255, 190, 0.35);
+    border-radius: 10px;
+
+    background: rgba(110, 255, 190, 0.04);
+
+    color: #6effbe;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.contact-primary svg {
+    width: 20px;
+    height: 20px;
+
+    transition: transform 0.25s ease;
+}
+
+.contact-primary:hover {
+    transform: translateY(-4px);
+
+    background: rgba(110, 255, 190, 0.09);
+    border-color: #6effbe;
+}
+
+.contact-primary:hover svg {
+    transform: translate(3px, -3px);
+}
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-info-label {
+    color: #666;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.contact-info-item>a,
+.contact-info-item>span:not(.contact-info-label) {
+    color: #d0d0d0;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contact-info-item>a {
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+.contact-info-item>a:hover {
+    color: #6effbe;
+}
+
+/* Availability */
+
+.availability {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.availability-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #6effbe;
+
+    box-shadow: 0 0 10px rgba(110, 255, 190, 0.65);
+}
+
+/* =========================
+   CLOSING
+========================= */
+
+.contact-closing {
+    display: grid;
+    grid-template-columns: 2px 1fr auto;
+    gap: 25px;
+
+    max-width: 950px;
+
+    margin-top: 160px;
+
+    animation: contactFadeUp 0.8s ease 0.25s both;
+}
+
+.contact-closing-line {
+    width: 2px;
+    min-height: 180px;
+
+    background: #6effbe;
+}
+
+.contact-closing-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #6effbe;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+}
+
+.contact-closing h2 {
+    margin: 0;
+
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+
+.contact-closing h2 span {
+    color: #666;
+}
+
+/* Back home */
+
+.contact-home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    align-self: flex-end;
+
+    padding-bottom: 5px;
+
+    color: #929292;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.contact-home-link svg {
+    width: 17px;
+    height: 17px;
+
+    transition: transform 0.25s ease;
+}
+
+.contact-home-link:hover {
+    color: #6effbe;
+    border-color: #6effbe;
+}
+
+.contact-home-link:hover svg {
+    transform: translate(3px, -3px);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes contactFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+    .contact-page {
+        padding: 80px 5vw 100px;
+    }
+
+    .contact-heading {
+        grid-template-columns: 1fr;
+        gap: 45px;
+
+        padding-bottom: 80px;
+    }
+
+    .contact-main {
+        grid-template-columns: 1fr;
+        gap: 70px;
+
+        margin-top: 100px;
+    }
+
+    .contact-info {
+        max-width: 650px;
+    }
+
+    .contact-closing {
+        margin-top: 110px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+    .contact-page {
+        padding: 65px 20px 80px;
+    }
+
+    .contact-heading {
+        gap: 35px;
+
+        margin-top: 25px;
+        padding-bottom: 65px;
+    }
+
+    .contact-heading h1 {
+        font-size: clamp(48px, 14vw, 70px);
+    }
+
+    .contact-intro p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .contact-main {
+        gap: 60px;
+        margin-top: 80px;
+    }
+
+    .contact-cta-label {
+        margin-bottom: 20px;
+    }
+
+    .contact-cta h2 {
+        margin-bottom: 30px;
+
+        font-size: clamp(40px, 11vw, 55px);
+    }
+
+    .contact-primary {
+        width: 100%;
+        min-height: 60px;
+
+        gap: 20px;
+    }
+
+    .contact-info-item {
+        padding: 20px 0;
+    }
+
+    .contact-closing {
+        grid-template-columns: 2px 1fr;
+        gap: 20px;
+
+        margin-top: 100px;
+    }
+
+    .contact-closing-line {
+        min-height: 170px;
+    }
+
+    .contact-closing h2 {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+
+    .contact-home-link {
+        grid-column: 2;
+
+        align-self: flex-start;
+
+        margin-top: 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+    .contact-page {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .contact-primary {
+        min-width: 0;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        font-size: 14px;
+    }
+
+    .contact-closing {
+        margin-top: 90px;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-hero,
+    .contact-main,
+    .contact-closing {
+        animation: none;
+    }
+
+    .contact-primary,
+    .contact-primary svg,
+    .contact-home-link,
+    .contact-home-link svg {
+        transition: none;
+    }
+}
