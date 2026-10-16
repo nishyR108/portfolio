@@ -134,7 +134,7 @@ function App() {
             <motion.div variants={reveal} className="section-label">CERTIFICATIONS</motion.div>
             <motion.h2 variants={reveal} className="section-title">Continuous <span>learning.</span></motion.h2>
             <motion.p variants={reveal} className="section-intro">Professional learning milestones that complement hands-on software development experience.</motion.p>
-            <div className="cert-grid">{certifications.map((cert, i) => <motion.article variants={reveal} whileHover={{ y: -6 }} className="cert-card" key={cert.title} onClick={() => setSelectedCertificate(cert)}><div className="cert-image"><img src={cert.image} alt={cert.title} /></div><div><span>{cert.issuer}</span><h3>{cert.title}</h3><p>{cert.description}</p><small>{cert.date} · {cert.credential}</small></div><b>↗</b></motion.article>)}</div>
+            <div className="cert-grid">{certifications.map((cert) => <motion.article variants={reveal} whileHover={{ y: -6 }} className="cert-card" key={cert.title} onClick={() => setSelectedCertificate(cert)}><div className="cert-image"><img src={cert.image} alt={cert.title} /></div><div><span>{cert.issuer}</span><h3>{cert.title}</h3><p>{cert.description}</p><small>{cert.date} · {cert.credential}</small></div><b>↗</b></motion.article>)}</div>
           </motion.div>
         </section>
 

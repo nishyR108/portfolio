@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './HomePage.css'
 import skillSet from '../../data/skills.json'
 
